@@ -20,7 +20,12 @@ public class HuffmanCode
      * the HashMap of the Huffman Code
      */
     private HashMap<Character,String> codeMap;
-
+    
+    public static void main(String[] args) {
+        HuffmanCode hc = new HuffmanCode("Test");
+        System.out.println(hc.encode("ts"));
+        System.out.println(hc.decode("1101"));
+    }
     /**
      * Constructor for objects of class HuffmanCode
      * 
@@ -93,14 +98,14 @@ public class HuffmanCode
         HNode root = this.codeTree;
         String ret = "";
         for (int i = 0; i < encoded.length(); i++) {
+            char c = encoded.charAt(i);
+            if (c == '1') root = root.getRightChild();
+            else if (c == '0') root = root.getLeftChild();
             if (root.getSymbol() != null) {
                 ret += root.getSymbol();
                 root = this.codeTree;
             }
             
-            char c = encoded.charAt(i);
-            if (c == '1') root = root.getRightChild();
-            else if (c == '0') root = root.getLeftChild();
         }
         return ret;
     }
