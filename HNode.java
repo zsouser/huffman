@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HNode extends BTNode<HuffmanData>
+public class HNode extends BTNode<HuffmanData> implements Comparable<HNode>
 {
     /**
      * Constructor for objects of class HNode
@@ -32,7 +32,7 @@ public class HNode extends BTNode<HuffmanData>
     }
     
     public int compareTo(HNode n) {
-        return this.getValue().compareTo(n.getValue());
+        return (int)(this.getFrequency()-n.getFrequency());
     }
     
     public boolean equals(HNode o) {
@@ -71,7 +71,7 @@ public class HNode extends BTNode<HuffmanData>
         this.getValue().setFrequency(frequency);
     }
     
-    public void setSymboll(Character symbol) {
+    public void setSymbol(Character symbol) {
         this.getValue().setSymbol(symbol);
     }
 }

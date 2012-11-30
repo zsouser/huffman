@@ -18,19 +18,19 @@ public class HuffmanData
      */
     public HuffmanData()
     {
-        code = null;
+        code = "";
         frq = 0;
         sym = null;
     }
     
     public HuffmanData(Character symbol) {
-        code = "" + symbol;
+        code = "";
         frq = 0;
         sym = symbol;
     }
     
     public HuffmanData(Character symbol, double frequency) {
-        code = "" + symbol;
+        code = "";
         frq = frequency;
         sym = symbol;
     }
