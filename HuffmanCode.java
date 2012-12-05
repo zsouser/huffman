@@ -21,11 +21,25 @@ public class HuffmanCode
      */
     private HashMap<Character,String> codeMap;
     
+    /**
+     * Main method
+     * 
+     * @param   args    ignored
+     */
+    
     public static void main(String[] args) {
-        HuffmanCode hc = new HuffmanCode("Test");
-        System.out.println(hc.encode("ts"));
-        System.out.println(hc.decode("1101"));
+        if (args.length > 0) {
+            String str = "";
+            for (String s : args) {
+                str += s + " ";
+            }
+            HuffmanCode hc = new HuffmanCode(str);
+            System.out.println(hc.getCodeMap());
+        } else {
+            System.out.println("No string entered. Please supply a string as an argument");
+        }
     }
+    
     /**
      * Constructor for objects of class HuffmanCode
      * 
@@ -68,7 +82,6 @@ public class HuffmanCode
             if (map.containsKey(ch)) map.put(ch, map.get(ch)+1);
             else map.put(ch,1);
         }
-        
         return map;
     }
     

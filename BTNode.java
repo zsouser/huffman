@@ -8,8 +8,14 @@ import java.io.Serializable;
  * @version 1.0
  */
 public class BTNode<T> implements Serializable {
-    // instance variables - replace the example below with your own
+    
+    /**
+     * The value of the BTNode
+     */
     private T value;
+    /**
+     * The children of the BTNode
+     */
     private BTNode<T> left, right;
 
     /**

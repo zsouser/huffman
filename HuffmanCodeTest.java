@@ -13,9 +13,16 @@ import org.junit.Test;
  */
 public class HuffmanCodeTest
 {
-    @Test
-    public void testPriorityQueue() {
-        HuffmanCode hc = new HuffmanCode("test");
-        Sysy
+    @Before
+    public void setUp() {
     }
+    
+    @Test
+    public void decodeTest() {
+    }
+    
+    @Test
+    public void encodeTest() {
+    }
+        
 }
